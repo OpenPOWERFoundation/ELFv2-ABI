@@ -132,6 +132,18 @@
           </link>
         </emphasis></para>
       </listitem>
+      <listitem revisionflag="added">
+        <para>ELFv2 ABI Compliance TH/TS Specification 1.00, OpenPOWER
+	Foundation, June 27, 2017.
+          <emphasis>
+            <link xl:href="http://cdn.openpowerfoundation.org/wp-content/uploads/resources/openpower-elfv2abi-thts/openpower-elfv2abi-thts-20170627.pdf">
+
+              <citetitle>
+	      http://cdn.openpowerfoundation.org/wp-content/uploads/resources/openpower-elfv2abi-thts/openpower-elfv2abi-thts-20170627.pdf</citetitle>
+            </link>
+          </emphasis>
+        </para>
+      </listitem>
     </itemizedlist>
     <para>The following documents are of interest for their historical
     information but are not normative in any way.</para>
@@ -231,5 +243,15 @@
 	</para>
       </listitem>
     </itemizedlist>
+  </section>
+  <section revisionflag="added">
+    <title>Conformance to this Specification</title>
+    <para>
+      Compilers, assemblers, linkers, system libraries, and other
+      toolchain components should be able to demonstrate conformance
+      to this specification according to the ELFv2 ABI Compliance
+      TH/TS Specification, available from openpowerfoundation.org.
+      See <xref linkend="dbdoclet.50655239___RefHeading___Toc377640569" />.
+    </para>
   </section>
 </chapter>
