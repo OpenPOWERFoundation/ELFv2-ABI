@@ -57,7 +57,7 @@
       <holder>Freescale Semiconductor, Inc</holder>
     </copyright>
     <!-- TODO: Set the correct document releaseinfo -->
-    <releaseinfo>Revision 1.5_prd</releaseinfo>
+    <releaseinfo>Revision 1.5</releaseinfo>
     <productname>OpenPOWER</productname>
     <pubdate/>
 
@@ -94,12 +94,11 @@
     <revhistory>
       <!-- TODO: Set the initial version information and clear any old information out -->
       <revision>
-          <date>2020-09-17</date>
+          <date>2020-11-30</date>
           <revdescription>
             <itemizedlist spacing="compact">
               <listitem>
-                <para>Revision 1.5_prd: POWER10 support (public review
-		draft).</para>
+                <para>Revision 1.5: POWER10 support.</para>
               </listitem>
             </itemizedlist>
           </revdescription>
