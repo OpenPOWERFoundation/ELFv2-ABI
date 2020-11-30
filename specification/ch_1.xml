@@ -248,10 +248,12 @@
     <title>Conformance to this Specification</title>
     <para>
       Compilers, assemblers, linkers, system libraries, and other
-      toolchain components should be able to demonstrate conformance
-      to this specification according to the ELFv2 ABI Compliance
-      TH/TS Specification, available from openpowerfoundation.org.
-      See <xref linkend="dbdoclet.50655239___RefHeading___Toc377640569" />.
+      toolchain components that implement this specification should
+      fully implement all relevant aspects described in chapters 2
+      through 6 of this specification, except for material that is
+      specifically denoted as optional, as an optimization, or as
+      an example.  Some aspects will only be relevant to a compiler,
+      while others will only be relevant to a linker, and so forth.
     </para>
   </section>
 </chapter>
