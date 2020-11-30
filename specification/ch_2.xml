@@ -5681,8 +5681,9 @@ xml:id="dbdoclet.50655240_pgfId-1156194">
         general-purpose register save and restore functions are to be used, the
         general-purpose registers shall be saved in a contiguous range.
         General-purpose register rN is saved in the doubleword located 8 x
-        (32 &#8211; N) bytes before the back-chain word of the previous frame, as shown
-        in 
+        (32 &#8211; N) bytes before the <phrase
+	revisionflag="changed">Floating-Point Register Save Area,</phrase>
+	as shown in
         <xref linkend="dbdoclet.50655240_97610" />.</para>
         <para>The General-Purpose Register Save Area is always doubleword
         aligned. The size of the General-Purpose Register Save Area depends
@@ -5698,7 +5699,8 @@ xml:id="dbdoclet.50655240_pgfId-1156194">
         saved in arbitrary locations in the stack frame. If the system vector
         register save and restore functions are to be used, the vector
         registers shall be saved in a contiguous range. Vector register vN is
-        saved in the doubleword located 16 x (32 &#8211; N) bytes before the
+        saved in the <phrase revisionflag="changed">quadword</phrase> located
+	16 x (32 &#8211; N) bytes before the
         General-Purpose Register Save Areas plus alignment padding, as shown in
         
         <xref linkend="dbdoclet.50655240_97610" />.</para>
