@@ -27,46 +27,6 @@
     implementation-specific features.
     </para>
     
-    <!-- Following deleted as redundant with sections 1 and 2.2.1, and
-	 confusing with regard to subsequent ISA publication
-	 strategies. -->
-
-    <para revisionflag="deleted">Specifically, to use this ABI and ABI-compliant programs, OpenPOWER-compliant 
-    processors must implement the following categories:
-      <itemizedlist>		      
-        <listitem><para>Base</para></listitem>
-        
-        <listitem><para>64-Bit</para></listitem>
-        
-        <listitem><para>Server (subject to system-level requirements)</para></listitem>
-        
-        <listitem><para>Floating-Point</para></listitem>
-        
-        <listitem><para>Floating-Point.Record</para></listitem>
-        
-        <listitem><para>Load/Store Quadword x2</para></listitem>
-        
-        <listitem><para>Store Conditional Page Mobility (subject to system-level requirements)</para></listitem>
-        
-        <listitem><para>Stream</para></listitem>
-        
-        <listitem><para>Transactional Memory</para></listitem>
-        
-        <listitem><para>Vector</para></listitem>
-        
-        <listitem><para>Vector.Little-Endian</para></listitem>
-        
-        <listitem><para>Vector-Scalar</para></listitem>
-      </itemizedlist>		      
-    </para>
-    
-    <para revisionflag="deleted">For more information about these categories, see “Categories” in Book I of 
-    <citetitle>Power ISA</citetitle>, version 2.07B.
-    </para>
-    
-    <para revisionflag="deleted">The OpenPOWER ELF V2 ABI is intended for use in little- and big-endian environments.
-    </para>
-    
   <simplesect>
     <title>Notices</title>
     <?dbhtml stop-chunking?>

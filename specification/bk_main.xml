@@ -37,7 +37,7 @@
     </author>
     <copyright>
       <!-- TODO: Keep second year accurate for latest publish -->
-      <year>2014-<phrase revisionflag="changed">2020</phrase></year>
+      <year>2014-2020</year>
       <holder>OpenPOWER Foundation</holder>
     </copyright>
     <copyright>
@@ -94,7 +94,7 @@
     <revhistory>
       <!-- TODO: Set the initial version information and clear any old information out -->
       <revision>
-          <date>2020-11-30</date>
+          <date>2020-12-01</date>
           <revdescription>
             <itemizedlist spacing="compact">
               <listitem>
@@ -173,7 +173,6 @@
   <xi:include href="ch_4.xml"/>
   <xi:include href="ch_5.xml"/>
   <xi:include href="ch_6.xml"/>
-  <xi:include href="app_a.xml"/>
   <xi:include href="app_b.xml"/>
   <xi:include href="app_glossary.xml"/>
 

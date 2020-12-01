@@ -242,7 +242,7 @@ xml:id="dbdoclet.50655243_pgfId-1099317">
                 the Power ISA for a POWER8 processor.</para>
               </entry>
             </row>
-	    <row revisionflag="added">
+	    <row>
 	      <entry>
 		<para>__PCREL__</para>
 	      </entry>
@@ -329,8 +329,6 @@ xml:id="dbdoclet.50655243_pgfId-1099317">
             <row>
               <entry morerows="1">
                 <para>__VEC_ELEMENT_REG_ORDER__</para>
-                <para revisionflag="deleted">For more information, see 
-                <xref linkend="dbdoclet.50655244_25365" />.</para>
               </entry>
               <entry>
                 <para>__ORDER_BIG_ENDIAN__</para>

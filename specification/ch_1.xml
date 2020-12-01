@@ -66,18 +66,15 @@
     <itemizedlist>
       <listitem>
         <para>
-        <emphasis><phrase revisionflag="added">IBM</phrase> Power
-	Instruction Set Architecture,</emphasis> Versions <phrase
-	revisionflag="deleted">2.7 and 3.0,</phrase> <phrase
-	revisionflag="added">2.07, 3.0, and 3.1</phrase>, IBM, <phrase
-	revisionflag="deleted">2013-2016</phrase><phrase
-	revisionflag="added">2013-2020</phrase>.
+        <emphasis>IBM Power
+	Instruction Set Architecture,</emphasis> Versions
+	2.07, 3.0, and 3.1, IBM, 2013-2020.
         <emphasis>
           <link xl:href="https://openpowerfoundation.org/technical/resource-catalog/">https://openpowerfoundation.org/technical/resource-catalog/
           </link>
         </emphasis></para>
       </listitem>
-      <listitem revisionflag="added">
+      <listitem>
 	<para>
 	  <emphasis>POWER Vector Intrinsics Programming
 	  Reference</emphasis>, Version 1.0.0, OpenPOWER Foundation,
@@ -132,7 +129,7 @@
           </link>
         </emphasis></para>
       </listitem>
-      <listitem revisionflag="added">
+      <listitem>
         <para>ELFv2 ABI Compliance TH/TS Specification 1.00, OpenPOWER
 	Foundation, June 27, 2017.
           <emphasis>
@@ -206,7 +203,7 @@
       </listitem>
     </itemizedlist>
   </section>
-  <section revisionflag="added">
+  <section>
     <title>Changes from Revision 1.4</title>
     <itemizedlist>
       <listitem>
@@ -244,7 +241,7 @@
       </listitem>
     </itemizedlist>
   </section>
-  <section revisionflag="added">
+  <section>
     <title>Conformance to this Specification</title>
     <para>
       Compilers, assemblers, linkers, system libraries, and other

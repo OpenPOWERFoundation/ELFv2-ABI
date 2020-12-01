@@ -280,9 +280,8 @@ e_ident[EI_DATA]     ELFDATA2LSB  For all little-endian implementations.</progra
     instruction of the two instruction form with a nop and rewriting the second
     instruction. Consequently, the TOC pointer must be live during the first
     and second instruction of a two-instruction reference.)</para>
-    <para revisionflag="deleted">&#160;</para>
     <section>
-      <title revisionflag="changed">Modules Containing Multiple TOCs</title>
+      <title>Modules Containing Multiple TOCs</title>
       <para>The link editor may create multiple TOCs. In such a case, the
       constituent .got, .toc, .sdata, and .sbss sections are conceptually
       repeated as necessary, with each TOC typically using a TOC pointer value
@@ -305,9 +304,8 @@ e_ident[EI_DATA]     ELFDATA2LSB  For all little-endian implementations.</progra
       table entry for that symbol. This entry will identify the symbol as
       undefined by setting the st_shndx member to SHN_UNDEF.</para>
       <para>The OpenPOWER ABI uses the three most-significant bits in the
-      symbol st_other field to specify the number of <phrase
-      revisionflag="deleted">instructions</phrase><phrase
-      revisionflag="added">bytes</phrase> between a
+      symbol st_other field to specify the number of
+      bytes between a
       function's global entry point and local entry point. The global entry
       point is used when it is necessary to set up the TOC pointer (r2) for the
       function. The local entry point is used when r2 is known to already be
@@ -359,9 +357,8 @@ e_ident[EI_DATA]     ELFDATA2LSB  For all little-endian implementations.</progra
                 <para>2</para>
               </entry>
               <entry>
-                <para>The local entry point is at <phrase
-		revisionflag="deleted">one instruction</phrase><phrase
-		revisionflag="added">four bytes</phrase> past the
+                <para>The local entry point is at
+		four bytes past the
                 global entry point.</para>
                 <para>When called at the global entry point, r12 must be set to
                 the function entry address. r2 will be set to the TOC base that
@@ -377,9 +374,8 @@ e_ident[EI_DATA]     ELFDATA2LSB  For all little-endian implementations.</progra
                 <para>3</para>
               </entry>
               <entry>
-                <para>The local entry point is at <phrase
-		revisionflag="deleted">two instructions</phrase><phrase
-		revisionflag="added">eight bytes</phrase> past the
+                <para>The local entry point is at
+		eight bytes past the
                 global entry point.</para>
                 <para>When called at the global entry point, r12 must be set to
                 the function entry address. r2 will be set to the TOC base that
@@ -395,9 +391,8 @@ e_ident[EI_DATA]     ELFDATA2LSB  For all little-endian implementations.</progra
                 <para>4</para>
               </entry>
               <entry>
-                <para>The local entry point is at <phrase
-		revisionflag="deleted">four instructions</phrase><phrase
-		revisionflag="added">sixteen bytes</phrase> past the
+                <para>The local entry point is at
+		sixteen bytes past the
                 global entry point.</para>
                 <para>When called at the global entry point, r12 must be set to
                 the function entry address. r2 will be set to the TOC base that
@@ -413,9 +408,8 @@ e_ident[EI_DATA]     ELFDATA2LSB  For all little-endian implementations.</progra
                 <para>5</para>
               </entry>
               <entry>
-                <para>The local entry point is at <phrase
-		revisionflag="deleted">eight instructions</phrase><phrase
-		revisionflag="added">thirty-two bytes</phrase> past the
+                <para>The local entry point is at
+		thirty-two bytes past the
                 global entry point.</para>
                 <para>When called at the global entry point, r12 must be set to
                 the function entry address. r2 will be set to the TOC base that
@@ -431,9 +425,8 @@ e_ident[EI_DATA]     ELFDATA2LSB  For all little-endian implementations.</progra
                 <para>6</para>
               </entry>
               <entry>
-                <para>The local entry point is at <phrase
-		revisionflag="deleted">16 instructions</phrase><phrase
-		revisionflag="added">sixty-four bytes</phrase> past the
+                <para>The local entry point is at
+		sixty-four bytes past the
                 global entry point.</para>
                 <para>When called at the global entry point, r12 must be set to
                 the function entry address. r2 will be set to the TOC base that
@@ -473,7 +466,7 @@ my_func:
       points, even if the global entry point will not be used. (In such a case,
       the instructions of the global entry setup sequence may optionally be
       initialized with TRAP instructions.)</para>
-      <para revisionflag="added">The value of st_other is determined
+      <para>The value of st_other is determined
       from the .localentry directive as follows: If the .localentry
       value is 0, the value of st_other is 0.  If the .localentry
       value is 1, the value of st_other is 1.  Otherwise, the value of
@@ -1010,8 +1003,8 @@ my_func:
         </tgroup>
       </informaltable>
       <para>In the following figure, low24 specifies a 24-bit field taking up
-      bits 6&#8211;29 of a <phrase revisionflag="changed">word.  The 32-bit
-      word is 4-byte aligned.</phrase> The other bits
+      bits 6&#8211;29 of a word.  The 32-bit
+      word is 4-byte aligned. The other bits
       remain unchanged. A call or unconditional branch instruction is an
       example of this field.</para>
       <para> </para>
@@ -2136,12 +2129,12 @@ my_func:
           </tbody>
         </tgroup>
       </informaltable>
-      <para revisionflag="added">
+      <para>
 	In the following figure, prefix34 specifies a 34-bit field split
 	between bits 14-31 and 48-63 of two consecutive words.  This is used
 	by many PC-relative load and store instructions.
       </para>
-      <informaltable frame="all" rowsep="0" colsep="0" revisionflag="added">
+      <informaltable frame="all" rowsep="0" colsep="0">
         <tgroup cols="10">
           <colspec colname="c1" colwidth="4*" />
           <colspec colname="c2" colwidth="4*" />
@@ -2280,12 +2273,12 @@ my_func:
           </tbody>
         </tgroup>
       </informaltable>
-      <para revisionflag="added">
+      <para>
 	In the following figure, prefix28 specifies a 28-bit field taking up
 	bits 20-31 and 48-63 of two consecutive words.  This is <!--used, for
 	example, by the pmlxv instruction --> reserved for future use.
       </para>
-      <informaltable frame="all" rowsep="0" colsep="0" revisionflag="added">
+      <informaltable frame="all" rowsep="0" colsep="0">
         <tgroup cols="12">
           <colspec colname="c1" colwidth="4*" />
           <colspec colname="c2" colwidth="4*" />
@@ -2448,10 +2441,10 @@ my_func:
                 <para>G</para>
               </entry>
               <entry>
-                <para>Represents the <phrase revisionflag="changed">address in
-		the TOC</phrase> at which the address of
+                <para>Represents the address in
+		the TOC at which the address of
                 the relocation entry’s symbol
-		<phrase revisionflag="added">plus addend</phrase>
+		plus addend
 		resides during execution. This
                 implies the creation of a .got section. For more information,
                 see 
@@ -2467,8 +2460,8 @@ my_func:
                 <para>L</para>
               </entry>
               <entry>
-                <para>Represents the <phrase revisionflag="deleted">section
-		offset or</phrase> address of the procedure
+                <para>Represents the
+		address of the procedure
                 linkage table entry for the symbol. This implies the creation
                 of a .plt section if one does not already exist. It also
                 implies the creation of a procedure linkage table (PLT) entry
@@ -2572,7 +2565,7 @@ my_func:
                 <para>#ha(x) = (x + 0x8000) &gt;&gt; 16</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>#high(value)</para>
               </entry>
@@ -2582,7 +2575,7 @@ my_func:
                 <para>#high(x) = (x &gt;&gt; 16) &amp; 0xffff</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>#higha(value)</para>
               </entry>
@@ -2595,7 +2588,7 @@ my_func:
 		0xffff</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>#higher(value)</para>
               </entry>
@@ -2605,7 +2598,7 @@ my_func:
                 <para>#higher(x) = (x &gt;&gt; 32) &amp; 0xffff</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>#highera(value)</para>
               </entry>
@@ -2618,7 +2611,7 @@ my_func:
 		0xffff</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>#highest(value)</para>
               </entry>
@@ -2628,7 +2621,7 @@ my_func:
                 <para>#highest(x) = x &gt;&gt; 48</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>#highesta(value)</para>
               </entry>
@@ -2640,7 +2633,7 @@ my_func:
                 <para>#highesta(x) = (x + 0x8000) &gt;&gt; 48</para>
               </entry>
             </row>
-	    <row revisionflag="added">
+	    <row>
 	      <entry>
 		<para>#lo34(value)</para>
 	      </entry>
@@ -2654,7 +2647,7 @@ my_func:
 		</para>
 	      </entry>
 	    </row>
-	    <row revisionflag="added">
+	    <row>
 	      <entry>
 		<para>#lo28(value)</para>
 	      </entry>
@@ -2668,7 +2661,7 @@ my_func:
 		</para>
 	      </entry>
 	    </row>
-	    <row revisionflag="added">
+	    <row>
 	      <entry>
 		<para>#hi30(value)</para>
 	      </entry>
@@ -2681,7 +2674,7 @@ my_func:
 		</para>
 	      </entry>
 	    </row>
-	    <row revisionflag="added">
+	    <row>
 	      <entry>
 		<para>#ha30(value)</para>
 	      </entry>
@@ -2696,7 +2689,7 @@ my_func:
 		</para>
 	      </entry>
 	    </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>#higher34(value)</para>
               </entry>
@@ -2706,7 +2699,7 @@ my_func:
                 <para>#higher34(x) = (x &gt;&gt; 34) &amp; 0xffff</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>#highera34(value)</para>
               </entry>
@@ -2719,7 +2712,7 @@ my_func:
 		0xffff</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>#highest34(value)</para>
               </entry>
@@ -2729,7 +2722,7 @@ my_func:
                 <para>#highest34(x) = x &gt;&gt; 50</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>#highesta34(value)</para>
               </entry>
@@ -2809,7 +2802,7 @@ my_func:
                 <para>dtv[dtpmod] + dtprel = (S + A)</para>
               </entry>
             </row>
-	    <row revisionflag="added">
+	    <row>
 	      <entry>
 		<para>rel16dx</para>
 	      </entry>
@@ -2837,18 +2830,9 @@ my_func:
               <entry>
                 <para>Allocates two contiguous entries in the GOT to hold a
                 tls_index structure, with values dtpmod and dtprel, and
-                computes the <phrase revisionflag="deleted">offset
-		from .TOC.</phrase><phrase
-		revisionflag="added">address</phrase> of the first
+                computes the
+		address of the first
 		entry.</para>
-                <para revisionflag="deleted">If n is the offset
-		computed:</para>
-                <para revisionflag="deleted">GOT[n] = dtpmod</para>
-                <para revisionflag="deleted">GOT[n + 1] = dtprel</para>
-                <para revisionflag="deleted">The call to
-		__tls_get_addr ( ) happens as:</para>
-                <para revisionflag="deleted">__tls_get_addr
-		((tls_index *) &amp;GOT[n])</para>
               </entry>
             </row>
             <row>
@@ -2858,21 +2842,12 @@ my_func:
               <entry>
                 <para>Allocates two contiguous entries in the GOT to hold a
                 tls_index structure, with values dtpmod and zero, and computes
-                the <phrase revisionflag="deleted">offset from
-		.TOC.</phrase><phrase
-		revisionflag="added">address</phrase> of the first
+                the
+		address of the first
 		entry.</para>
-                <para revisionflag="deleted">If n is the offset
-		computed:</para>
-                <para revisionflag="deleted">GOT[n] = dtpmod</para>
-                <para revisionflag="deleted">GOT[n + 1] = 0</para>
-                <para revisionflag="deleted">The call to
-		__tls_get_addr ( ) happens as:</para>
-                <para revisionflag="deleted">__tls_get_addr
-		((tls_index *) &amp;GOT[n])</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>@got@dtprel</para>
               </entry>
@@ -2887,16 +2862,9 @@ my_func:
               </entry>
               <entry>
                 <para>Allocates an entry in the GOT with value tprel, and
-                computes the <phrase revisionflag="deleted">offset
-		from .TOC.</phrase><phrase
-		revisionflag="added">address</phrase> of the
+                computes the
+		address of the
 		entry.</para>
-                <para revisionflag="deleted">If n is the offset
-		computed:</para>
-                <para revisionflag="deleted">GOT[n] = tprel</para>
-                <para revisionflag="deleted">The value of tprel is
-		loaded into a register from the
-                location (GOT + n) to be used in an r2 form instruction.</para>
               </entry>
             </row>
           </tbody>
@@ -3131,7 +3099,7 @@ my_func:
               </entry>
               <entry>
                 <para>
-		  <phrase revisionflag="changed">G &#8211; .TOC.</phrase>
+		  G &#8211; .TOC.
 		</para>
               </entry>
             </row>
@@ -3147,7 +3115,7 @@ my_func:
               </entry>
               <entry>
                 <para>
-		  <phrase revisionflag="changed">#lo(G &#8211; .TOC.)</phrase>
+		  #lo(G &#8211; .TOC.)
 		</para>
               </entry>
             </row>
@@ -3163,7 +3131,7 @@ my_func:
               </entry>
               <entry>
                 <para>
-		  <phrase revisionflag="changed">#hi(G &#8211; .TOC.)</phrase>
+		  #hi(G &#8211; .TOC.)
 		</para>
               </entry>
             </row>
@@ -3179,7 +3147,7 @@ my_func:
               </entry>
               <entry>
                 <para>
-		  <phrase revisionflag="changed">#ha(G &#8211; .TOC.)</phrase>
+		  #ha(G &#8211; .TOC.)
 		</para>
               </entry>
             </row>
@@ -3323,7 +3291,7 @@ my_func:
               </entry>
               <entry>
                 <para>
-		  <phrase revisionflag="changed">#lo(L &#8211; .TOC.)</phrase>
+		  #lo(L &#8211; .TOC.)
 		</para>
               </entry>
             </row>
@@ -3339,7 +3307,7 @@ my_func:
               </entry>
               <entry>
                 <para>
-		  <phrase revisionflag="changed">#hi(L &#8211; .TOC.)</phrase>
+		  #hi(L &#8211; .TOC.)
 		</para>
               </entry>
             </row>
@@ -3355,7 +3323,7 @@ my_func:
               </entry>
               <entry>
                 <para>
-		  <phrase revisionflag="changed">#ha(L &#8211; .TOC.)</phrase>
+		  #ha(L &#8211; .TOC.)
 		</para>
               </entry>
             </row>
@@ -3721,8 +3689,8 @@ my_func:
               </entry>
               <entry>
                 <para>
-		  <phrase revisionflag="changed">(G &#8211; .TOC.) &gt;&gt;
-		  2</phrase>
+		  (G &#8211; .TOC.) &gt;&gt;
+		  2
 		</para>
               </entry>
             </row>
@@ -3738,8 +3706,8 @@ my_func:
               </entry>
               <entry>
                 <para>
-		  <phrase revisionflag="changed">#lo(G &#8211; .TOC.) &gt;&gt;
-		  2</phrase>
+		  #lo(G &#8211; .TOC.) &gt;&gt;
+		  2
 		</para>
               </entry>
             </row>
@@ -3755,8 +3723,8 @@ my_func:
               </entry>
               <entry>
                 <para>
-		  <phrase revisionflag="changed">#lo(L &#8211; .TOC.) &gt;&gt;
-		  2</phrase>
+		  #lo(L &#8211; .TOC.) &gt;&gt;
+		  2
 		</para>
               </entry>
             </row>
@@ -4023,8 +3991,8 @@ my_func:
                 <para>half16*</para>
               </entry>
               <entry>
-                <para>@got@tlsgd <phrase revisionflag="added">&#8211;
-		.TOC.</phrase></para>
+                <para>@got@tlsgd &#8211;
+		.TOC.</para>
               </entry>
             </row>
             <row>
@@ -4038,8 +4006,8 @@ my_func:
                 <para>half16</para>
               </entry>
               <entry>
-                <para>#lo(@got@tlsgd <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#lo(@got@tlsgd &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4053,8 +4021,8 @@ my_func:
                 <para>half16*</para>
               </entry>
               <entry>
-                <para>#hi(@got@tlsgd <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#hi(@got@tlsgd &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4068,8 +4036,8 @@ my_func:
                 <para>half16*</para>
               </entry>
               <entry>
-                <para>#ha(@got@tlsgd <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#ha(@got@tlsgd &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4083,8 +4051,8 @@ my_func:
                 <para>half16*</para>
               </entry>
               <entry>
-                <para>@got@tlsld <phrase revisionflag="added">&#8211;
-		.TOC.</phrase></para>
+                <para>@got@tlsld &#8211;
+		.TOC.</para>
               </entry>
             </row>
             <row>
@@ -4098,8 +4066,8 @@ my_func:
                 <para>half16</para>
               </entry>
               <entry>
-                <para>#lo(@got@tlsld <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#lo(@got@tlsld &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4113,8 +4081,8 @@ my_func:
                 <para>half16*</para>
               </entry>
               <entry>
-                <para>#hi(@got@tlsld <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#hi(@got@tlsld &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4128,8 +4096,8 @@ my_func:
                 <para>half16*</para>
               </entry>
               <entry>
-                <para>#ha(@got@tlsld <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#ha(@got@tlsld &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4143,8 +4111,8 @@ my_func:
                 <para>half16ds*</para>
               </entry>
               <entry>
-                <para>@got@tprel <phrase revisionflag="added">&#8211;
-		.TOC.</phrase></para>
+                <para>@got@tprel &#8211;
+		.TOC.</para>
               </entry>
             </row>
             <row>
@@ -4158,8 +4126,8 @@ my_func:
                 <para>half16ds</para>
               </entry>
               <entry>
-                <para>#lo(@got@tprel <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#lo(@got@tprel &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4173,8 +4141,8 @@ my_func:
                 <para>half16*</para>
               </entry>
               <entry>
-                <para>#hi(@got@tprel <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#hi(@got@tprel &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4188,8 +4156,8 @@ my_func:
                 <para>half16*</para>
               </entry>
               <entry>
-                <para>#ha(@got@tprel <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#ha(@got@tprel &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4203,8 +4171,8 @@ my_func:
                 <para>half16ds*</para>
               </entry>
               <entry>
-                <para>@got@dtprel <phrase revisionflag="added">&#8211;
-		.TOC.</phrase></para>
+                <para>@got@dtprel &#8211;
+		.TOC.</para>
               </entry>
             </row>
             <row>
@@ -4218,8 +4186,8 @@ my_func:
                 <para>half16ds</para>
               </entry>
               <entry>
-                <para>#lo(@got@dtprel <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#lo(@got@dtprel &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4233,8 +4201,8 @@ my_func:
                 <para>half16*</para>
               </entry>
               <entry>
-                <para>#hi(@got@dtprel <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#hi(@got@dtprel &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4248,8 +4216,8 @@ my_func:
                 <para>half16*</para>
               </entry>
               <entry>
-                <para>#ha(@got@dtprel <phrase revisionflag="added">&#8211;
-		.TOC.</phrase>)</para>
+                <para>#ha(@got@dtprel &#8211;
+		.TOC.)</para>
               </entry>
             </row>
             <row>
@@ -4597,7 +4565,7 @@ my_func:
 		<para>none</para>
 	      </entry>
 	    </row>
-	    <row revisionflag="added">
+	    <row>
 	      <entry>
 		<para>R_PPC64_PLTSEQ</para>
 	      </entry>
@@ -4611,7 +4579,7 @@ my_func:
 		<para>none</para>
 	      </entry>
 	    </row>
-	    <row revisionflag="added">
+	    <row>
 	      <entry>
 		<para>R_PPC64_PLTCALL</para>
 	      </entry>
@@ -4625,7 +4593,7 @@ my_func:
 		<para>none</para>
 	      </entry>
 	    </row>
-	    <row revisionflag="added">
+	    <row>
 	      <entry>
 		<para>R_PPC64_PLTSEQ_NOTOC</para>
 	      </entry>
@@ -4639,7 +4607,7 @@ my_func:
 		<para>none</para>
 	      </entry>
 	    </row>
-	    <row revisionflag="added">
+	    <row>
 	      <entry>
 		<para>R_PPC64_PLTCALL_NOTOC</para>
 	      </entry>
@@ -4653,7 +4621,7 @@ my_func:
 		<para>none</para>
 	      </entry>
 	    </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_PCREL_OPT</para>
               </entry>
@@ -4667,7 +4635,7 @@ my_func:
                 <para>none</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_D34</para>
               </entry>
@@ -4681,7 +4649,7 @@ my_func:
                 <para>S + A</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_D34_LO</para>
               </entry>
@@ -4695,7 +4663,7 @@ my_func:
                 <para>#lo34(S + A)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_D34_HI30</para>
               </entry>
@@ -4709,7 +4677,7 @@ my_func:
                 <para>#hi30(S + A)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_D34_HA30</para>
               </entry>
@@ -4723,7 +4691,7 @@ my_func:
                 <para>#ha30(S + A)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_PCREL34</para>
               </entry>
@@ -4737,7 +4705,7 @@ my_func:
                 <para>S + A &#8211; P</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_GOT_PCREL34</para>
               </entry>
@@ -4751,7 +4719,7 @@ my_func:
                 <para>G &#8211; P</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_PLT_PCREL34</para>
               </entry>
@@ -4765,7 +4733,7 @@ my_func:
                 <para>L &#8211; P</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_PLT_PCREL34_NOTOC</para>
               </entry>
@@ -4779,7 +4747,7 @@ my_func:
                 <para>L &#8211; P</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_ADDR16_HIGHER34</para>
               </entry>
@@ -4793,7 +4761,7 @@ my_func:
                 <para>#higher34(S + A)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_ADDR16_HIGHERA34</para>
               </entry>
@@ -4807,7 +4775,7 @@ my_func:
                 <para>#highera34(S + A)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_ADDR16_HIGHEST34</para>
               </entry>
@@ -4821,7 +4789,7 @@ my_func:
                 <para>#highest34(S + A)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_ADDR16_HIGHESTA34</para>
               </entry>
@@ -4835,7 +4803,7 @@ my_func:
                 <para>#highesta34(S + A)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16_HIGHER34</para>
               </entry>
@@ -4849,7 +4817,7 @@ my_func:
                 <para>#higher34(S + A &#8211; P)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16_HIGHERA34</para>
               </entry>
@@ -4863,7 +4831,7 @@ my_func:
                 <para>#highera34(S + A &#8211; P)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16_HIGHEST34</para>
               </entry>
@@ -4877,7 +4845,7 @@ my_func:
                 <para>#highest34(S + A &#8211; P)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16_HIGHESTA34</para>
               </entry>
@@ -4891,7 +4859,7 @@ my_func:
                 <para>#highesta34(S + A &#8211; P)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_D28</para>
               </entry>
@@ -4905,7 +4873,7 @@ my_func:
                 <para>S + A</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_PCREL28</para>
               </entry>
@@ -4919,7 +4887,7 @@ my_func:
                 <para>S + A &#8211; P</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_TPREL34</para>
               </entry>
@@ -4933,7 +4901,7 @@ my_func:
                 <para>@tprel</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_DTPREL34</para>
               </entry>
@@ -4947,7 +4915,7 @@ my_func:
                 <para>@dtprel</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_GOT_TLSGD_PCREL34</para>
               </entry>
@@ -4961,7 +4929,7 @@ my_func:
                 <para>@got@tlsgd &#8211; <emphasis>P</emphasis></para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_GOT_TLSLD_PCREL34</para>
               </entry>
@@ -4975,7 +4943,7 @@ my_func:
                 <para>@got@tlsld &#8211; <emphasis>P</emphasis></para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_GOT_TPREL_PCREL34</para>
               </entry>
@@ -4989,7 +4957,7 @@ my_func:
                 <para>@got@tprel &#8211; <emphasis>P</emphasis></para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_GOT_DTPREL_PCREL34</para>
               </entry>
@@ -5003,7 +4971,7 @@ my_func:
                 <para>@got@dtprel &#8211; <emphasis>P</emphasis></para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16_HIGH</para>
               </entry>
@@ -5017,7 +4985,7 @@ my_func:
                 <para>#high(S + A &#8211; P)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16_HIGHA</para>
               </entry>
@@ -5031,7 +4999,7 @@ my_func:
                 <para>#higha(S + A &#8211; P)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16_HIGHER</para>
               </entry>
@@ -5045,7 +5013,7 @@ my_func:
                 <para>#higher(S + A &#8211; P)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16_HIGHERA</para>
               </entry>
@@ -5059,7 +5027,7 @@ my_func:
                 <para>#highera(S + A &#8211; P)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16_HIGHEST</para>
               </entry>
@@ -5073,7 +5041,7 @@ my_func:
                 <para>#highest(S + A &#8211; P)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16_HIGHESTA</para>
               </entry>
@@ -5087,7 +5055,7 @@ my_func:
                 <para>#highesta(S + A &#8211; P)</para>
               </entry>
             </row>
-            <row revisionflag="added">
+            <row>
               <entry>
                 <para>R_PPC64_REL16DX_HA</para>
               </entry>
@@ -5287,24 +5255,22 @@ my_func:
       <para>R_PPC64_REL24_NOTOC</para>
       <para>This relocation type is used to specify a function call where the
       TOC pointer is not initialized. It is similar to R_PPC64_REL24 in that it
-      specifies a symbol to be resolved. <phrase revisionflag="added">If the
+      specifies a symbol to be resolved. If the
       symbol resolves to a function that requires a TOC pointer (as
       determined by st_other bits) then a link editor must arrange for the
       call to be via the global entry point of the called function.
-      Any</phrase>
-      <phrase revisionflag="deleted">However, if the symbol is resolved by
-      inserting a call to a PLT stub code, the PLT</phrase> stub code must
-      not rely on <phrase revisionflag="deleted">the presence of</phrase>
-      a valid TOC base address in <phrase revisionflag="deleted">TOC
-      register</phrase> r2<phrase revisionflag="deleted"> to reference
-      the PLT function table</phrase>.</para>
+      Any
+      stub code must
+      not rely on
+      a valid TOC base address in
+      r2.</para>
       <para>R_PPC64_ENTRY</para>
       <para>This relocation type may optionally be
       associated with a global entry point.  See
       <xref linkend="dbdoclet.50655241_95185" /> for discussion of its
       use.</para>
-      <para revisionflag="added">R_PPC64_PLTSEQ, R_PPC64_PLTCALL</para>
-      <para revisionflag="added">
+      <para>R_PPC64_PLTSEQ, R_PPC64_PLTCALL</para>
+      <para>
 	These relocations mark the instruction as being part of an inline
 	PLT call sequence in a function where r2 is a valid TOC pointer.
 	R_PPC64_PLTCALL is used to mark the call instruction, while
@@ -5314,16 +5280,16 @@ my_func:
 	R_PPC64_PLTCALL also implicitly marks the nop or TOC-restoring
 	instruction immediately following the call instruction.
       </para>
-      <para revisionflag="added">R_PPC64_PLTSEQ_NOTOC,
+      <para>R_PPC64_PLTSEQ_NOTOC,
       R_PPC64_PLTCALL_NOTOC</para>
-      <para revisionflag="added">
+      <para>
 	These relocations are like the corresponding R_PPC64_PLTSEQ and
 	R_PPC64_PLTCALL relocations, but are used in functions where r2 is
 	not a valid TOC pointer.  All instructions in the sequence shall use
 	_NOTOC variant relocations.
       </para>
-      <para revisionflag="added">R_PPC64_PCREL_OPT</para>
-      <para revisionflag="added">
+      <para>R_PPC64_PCREL_OPT</para>
+      <para>
 	This relocation specifies that the instruction at
 	<emphasis>r_offset</emphasis> and the instruction at
 	<emphasis>r_offset</emphasis> + <emphasis>r_addend</emphasis> may be
@@ -5398,15 +5364,14 @@ addi   2,2,.TOC.-func@l</programlisting>
     requirements as indicated in this section.</para>
     <section xml:id="dbdoclet.50655241_69294">
       <title>Function Call</title>
-      <para><phrase revisionflag="added">Unless the bl instruction is
-      annotated with an R_PPC64_REL24_NOTOC relocation,</phrase>
-      <phrase revisionflag="changed">the</phrase>
+      <para>Unless the bl instruction is
+      annotated with an R_PPC64_REL24_NOTOC relocation,
+      the
       static linker must modify a nop instruction after a bl function
       call to restore the TOC pointer in r2 from 24(r1) when an external symbol
       that may use the TOC may be called, as in 
       <xref linkend="dbdoclet.50655240_88555" />.
-      <phrase revisionflag="deleted">A function must contain a
-      nop slot after a bl instruction to an external symbol.</phrase></para>
+      </para>
     </section>
     <section>
       <title>Reference Optimization</title>
@@ -5476,7 +5441,7 @@ target:
         rewrite address references created using GOT-indirect loads and bl+4
         sequences to use TOC-relative address computation.</para>
       </section>
-      <section xml:id="dbdoclet.50655241_OptPCRel" revisionflag="added">
+      <section xml:id="dbdoclet.50655241_OptPCRel">
 	<title>Displacement Optimization for PC-Relative Accesses</title>
 	<para>
 	  Compilers and assembly programmers must assume that references to
@@ -5506,7 +5471,7 @@ nop</programlisting>
 	</para>
       </section>
 <!--
-      <section xml:id="dbdoclet.50655241_OptMask" revisionflag="added">
+      <section xml:id="dbdoclet.50655241_OptMask">
 	<title>Optimization of Masked Load/Store Sequences</title>
 	<para>
 	  PC-relative forms of the pmlxv and pmstxv instructions have a
@@ -5605,15 +5570,11 @@ addi      r4, r4, lower</programlisting>
       <para>The current glibc extended TCB is:</para>
       <programlisting>typedef struct {
     /* Reservation for HWCAP data. */
-        <phrase revisionflag="deleted">unsigned int hwcap2;</phrase>
-        <phrase revisionflag="changed">uint64_t</phrase> hwcap; <phrase revisionflag="deleted">/* not used in LE ABI */</phrase>
+        uint64_t hwcap;
  
-    <phrase revisionflag="deleted">/* Indicate if HTM capable (ISA 2.07). */
-        int tm_capable;
-        int tm_pad;</phrase>
-    <phrase revisionflag="added">/* Reservation for AT_PLATFORM data.  */
+    /* Reservation for AT_PLATFORM data.  */
         uint32_t __unused;
-        uint32_t at_platform;</phrase>
+        uint32_t at_platform;
 
     /* Reservation for dynamic system optimizer ABI. */
         uintptr_t dso_slot2;
@@ -5739,9 +5700,9 @@ extern void *__tls_get_addr (tls_index *ti);</programlisting>
       <para>Given the following code fragment, to determine the address of a
       thread-local variable x, the __tls_get_addr( ) function is called with one
       parameter. That parameter is a pointer to a data object of type
-      tls_index.  <phrase revisionflag="added">Note that different
+      tls_index.  Note that different
       code generation is used for PC-relative addressing, but the GOT
-      entry relocations are identical.</phrase></para>
+      entry relocations are identical.</para>
       <programlisting>extern __thread unsigned int x;
 &amp;x;</programlisting>
       <table frame="all" pgwide="1">
@@ -5826,7 +5787,7 @@ extern void *__tls_get_addr (tls_index *ti);</programlisting>
         </tgroup>
       </table>
       <para> </para>
-      <table frame="all" pgwide="1" revisionflag="added">
+      <table frame="all" pgwide="1">
         <title>PC-Relative General Dynamic Initial Relocations</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -5942,8 +5903,8 @@ extern void *__tls_get_addr (tls_index *ti);</programlisting>
       data object is loaded into the first argument register with the addis and
       addi instruction, and a standard function call is made. Notice that the
       bl instruction has two relocations: the R_PPC64_TLSGD tying it to the
-      argument setup instructions and the R_PPC64_REL24 <phrase
-      revisionflag="added"> or R_PPC64_REL24_NOTOC</phrase> specifying the call
+      argument setup instructions and the R_PPC64_REL24
+      or R_PPC64_REL24_NOTOC specifying the call
       destination.</para>
     </section>
     <section>
@@ -6138,11 +6099,10 @@ static __thread unsigned int x3;
           </tbody>
         </tgroup>
       </table>
-      <para revisionflag="added">
+      <para>
 	Once again, there are alternative sequences for PC-relative addressing.
       </para>
-      <table frame="all" pgwide="1" xml:id="dbdoclet.ld-pcrel"
-	     revisionflag="added">
+      <table frame="all" pgwide="1" xml:id="dbdoclet.ld-pcrel">
         <title>PC-Relative Local Dynamic Initial Relocations</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -6477,12 +6437,11 @@ static __thread unsigned int x3;
           </tbody>
         </tgroup>
       </table>
-      <para revisionflag="added">
+      <para>
 	For PC-relative addressing, replace the latter part of 
       <xref linkend="dbdoclet.ld-pcrel" /> with the following code
       sequence.</para>
-      <table frame="all" pgwide="1" xml:id="dbdoclet.ld-values"
-	     revisionflag="added">
+      <table frame="all" pgwide="1" xml:id="dbdoclet.ld-values">
         <title>Local Dynamic Relocations with Values Loaded</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -6658,12 +6617,11 @@ static __thread unsigned int x3;
           </tbody>
         </tgroup>
       </table>
-      <para revisionflag="added">
+      <para>
 	With PC-relative addressing, the relocation sequence in 
 	<xref linkend="dbdoclet.ie-relocs" /> is used instead:
       </para>
-      <table frame="all" pgwide="1" xml:id="dbdoclet.ie-relocs"
-	     revisionflag="added">
+      <table frame="all" pgwide="1" xml:id="dbdoclet.ie-relocs">
         <title>PC-Relative Initial Exec Initial Relocations</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -6765,17 +6723,13 @@ static __thread unsigned int x3;
       <para>
 	To read the contents of the variable instead of calculating its
 	address, the add r9, r9, x@tls instruction
-	<phrase revisionflag="added">
-	  in <xref linkend="dbdoclet.50655241_17435" />
-	</phrase>
+	in <xref linkend="dbdoclet.50655241_17435" />
 	might be replaced with lwzx r0, r9, x@tls.
-	<phrase revisionflag="added">
-	  The add r9, r9, x@tls@pcrel instruction in <xref
-	  linkend="dbdoclet.ie-relocs" /> might likewise be replaced
-	  with lwzx r0, r9, x@tls@pcrel.
-	</phrase>
+	The add r9, r9, x@tls@pcrel instruction in <xref
+	linkend="dbdoclet.ie-relocs" /> might likewise be replaced
+	with lwzx r0, r9, x@tls@pcrel.
       </para>
-      <para revisionflag="added">
+      <para>
 	Note that both the x@tls and x@tls@pcrel assembly forms are
 	annotated with R_PPC64_TLS relocations.  To distinguish
 	between the two, the second of these has a field value
@@ -6900,8 +6854,7 @@ static __thread unsigned int x3;
           </tbody>
         </tgroup>
       </table>
-      <table frame="all" pgwide="1" xml:id="dbdoclet.le-relocs"
-	     revisionflag="added">
+      <table frame="all" pgwide="1" xml:id="dbdoclet.le-relocs">
         <title>PC-Relative Local Exec Initial Relocations (Sequences 1
 	and 2)</title>
         <tgroup cols="3">
@@ -6965,7 +6918,7 @@ static __thread unsigned int x3;
           <para>Initial Exec to Local Exec</para>
         </listitem>
       </itemizedlist>
-      <para revisionflag="added">
+      <para>
 	<xref linkend="dbdoclet.gd-ie" /> through <xref
 	linkend="dbdoclet.ie-le" /> describe TLS link editor
 	transformations using a TOC addressing model, and <xref
@@ -6974,11 +6927,11 @@ static __thread unsigned int x3;
 	transformations using a PC-relative addressing model.
       </para>
     <section xml:id="dbdoclet.gd-ie">
-      <title>General Dynamic to Initial Exec <phrase
-      revisionflag="added">(TOC)</phrase></title> 
+      <title>General Dynamic to Initial Exec
+      (TOC)</title> 
       <table frame="all" pgwide="1">
         <title>General-Dynamic-to-Initial-Exec Initial Relocations
-	<phrase revisionflag="added">(TOC)</phrase>
+	(TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -7061,7 +7014,7 @@ static __thread unsigned int x3;
       </table>
       <table frame="all" pgwide="1">
         <title>General-Dynamic-to-Initial-Exec GOT Entry Relocations
-	<phrase revisionflag="added">(TOC)</phrase>
+	(TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -7116,7 +7069,7 @@ static __thread unsigned int x3;
       the following code and global offset table entries.</para>
       <table frame="all" pgwide="1">
         <title>General-Dynamic-to-Initial-Exec Replacement Initial
-        Relocations <phrase revisionflag="added">(TOC)</phrase></title>
+        Relocations (TOC)</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
           <colspec colname="c2" colwidth="33*" />
@@ -7190,7 +7143,7 @@ static __thread unsigned int x3;
       </table>
       <table frame="all" pgwide="1">
         <title>General-Dynamic-to-Initial-Exec Replacement GOT Entry
-        Relocations <phrase revisionflag="added">(TOC)</phrase></title>
+        Relocations (TOC)</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
           <colspec colname="c2" colwidth="33*" />
@@ -7231,8 +7184,8 @@ static __thread unsigned int x3;
       </table>
     </section>
     <section>
-      <title>General Dynamic to Local Exec <phrase
-      revisionflag="added">(TOC)</phrase></title>
+      <title>General Dynamic to Local Exec
+      (TOC)</title>
       <table frame="all" pgwide="1">
         <title>General-Dynamic-to-Local-Exec Initial Relocations</title>
         <tgroup cols="3">
@@ -7316,7 +7269,7 @@ static __thread unsigned int x3;
       </table>
       <table frame="all" pgwide="1" xml:id="dbdoclet.50655241_16273">
         <title>General-Dynamic-to-Local-Exec GOT Entry Relocations
-	<phrase revisionflag="added">(TOC)</phrase></title>
+	(TOC)</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
           <colspec colname="c2" colwidth="33*" />
@@ -7382,7 +7335,7 @@ nop</programlisting>
       </footnote></para>
       <table frame="all" pgwide="1">
         <title>General-Dynamic-to-Local-Exec Replacement Initial
-        Relocations <phrase revisionflag="added">(TOC)</phrase></title>
+        Relocations (TOC)</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
           <colspec colname="c2" colwidth="33*" />
@@ -7457,14 +7410,14 @@ nop</programlisting>
     </section>
     <section>
       <title>Local Dynamic to Local Exec
-      <phrase revisionflag="added">(TOC)</phrase>
+      (TOC)
       </title>
       <para>Under this TLS linker optimization, the function call is replaced
       with an equivalent code sequence. However, as shown in the following code
       examples, the dtprel sequences are left unchanged.</para>
       <table frame="all" pgwide="1" xml:id="dbdoclet.50655241_56118">
         <title>Local-Dynamic-to-Local-Exec Initial Relocations
-	<phrase revisionflag="added">(TOC)</phrase>
+	(TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -7649,7 +7602,7 @@ nop</programlisting>
       </table>
       <table frame="all" pgwide="1">
         <title>Local-Dynamic-to-Local-Exec GOT Entry Relocations
-	<phrase revisionflag="added">(TOC)</phrase>
+	(TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -7726,7 +7679,7 @@ nop</programlisting>
       the following code and global offset table entries.</para>
       <table frame="all" pgwide="1">
         <title>Local-Dynamic-to-Local-Exec Replacement Initial
-        Relocations <phrase revisionflag="added">(TOC)</phrase>
+        Relocations (TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -7907,7 +7860,7 @@ nop</programlisting>
       <xref linkend="dbdoclet.50655241_90771" />.</para>
       <table frame="all" pgwide="1" xml:id="dbdoclet.50655241_90771">
         <title>Local-Dynamic-to-Local-Exec Replacement GOT Entry
-        Relocations <phrase revisionflag="added">(TOC)</phrase>
+        Relocations (TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -7953,13 +7906,13 @@ nop</programlisting>
     </section>
     <section xml:id="dbdoclet.ie-le">
       <title>Initial Exec to Local Exec
-      <phrase revisionflag="added">(TOC)</phrase>
+      (TOC)
       </title>
       <para>This transformation is only performed by the linker when the symbol
       is within 2 GB + 28 KB of the thread pointer.</para>
       <table frame="all" pgwide="1">
         <title>Initial-Exec-to-Local-Exec Initial Relocations
-	<phrase revisionflag="added">(TOC)</phrase>
+	(TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -8023,7 +7976,7 @@ nop</programlisting>
       </table>
       <table frame="all" pgwide="1">
         <title>Initial-Exec-to-Local-Exec GOT Entry Relocations
-	<phrase revisionflag="added">(TOC)</phrase>
+	(TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -8067,7 +8020,7 @@ nop</programlisting>
       the following code and global offset table entries.</para>
       <table frame="all" pgwide="1">
         <title>Initial-Exec-to-Local-Exec Replacement Initial
-        Relocations <phrase revisionflag="added">(TOC)</phrase>
+        Relocations (TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -8129,7 +8082,7 @@ nop</programlisting>
       instructions.</para>
       <table frame="all" pgwide="1" xml:id="dbdoclet.50655241_81882">
         <title>Initial-Exec-to-Local-Exec X-form Initial Relocations
-	<phrase revisionflag="added">(TOC)</phrase>
+	(TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -8215,7 +8168,7 @@ nop</programlisting>
       </table>
       <table frame="all" pgwide="1">
         <title>Initial-Exec-to-Local-Exec X-form GOT Entry Relocations
-	<phrase revisionflag="added">(TOC)</phrase>
+	(TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -8259,7 +8212,7 @@ nop</programlisting>
       the following code and global offset table entries.</para>
       <table frame="all" pgwide="1">
         <title>Initial-Exec-to-Local-Exec X-form Replacement Initial
-        Relocations <phrase revisionflag="added">(TOC)</phrase>
+        Relocations (TOC)
 	</title>
         <tgroup cols="3">
           <colspec colname="c1" colwidth="33*" />
@@ -8344,7 +8297,7 @@ nop</programlisting>
         </tgroup>
       </table>
     </section>
-    <section xml:id="dbdoclet.gd-ie-pcrel" revisionflag="added">
+    <section xml:id="dbdoclet.gd-ie-pcrel">
       <title>General Dynamic to Initial Exec (PC-Relative)</title>
       <table frame="all" pgwide="1">
         <title>General-Dynamic-to-Initial-Exec Initial Relocations
@@ -8557,7 +8510,7 @@ nop</programlisting>
         </tgroup>
       </table>
     </section>
-    <section revisionflag="added">
+    <section>
       <title>General Dynamic to Local Exec (PC-Relative)</title>
       <table frame="all" pgwide="1">
         <title>General-Dynamic-to-Local-Exec Initial Relocations
@@ -8729,7 +8682,7 @@ nop</programlisting>
         </tgroup>
       </table>
     </section>
-    <section revisionflag="added">
+    <section>
       <title>Local Dynamic to Local Exec (PC-Relative)</title>
       <para>Under this TLS linker optimization, the function call is replaced
       with an equivalent code sequence. However, as shown in the following code
@@ -9080,7 +9033,7 @@ nop</programlisting>
         </tgroup>
       </table>
     </section>
-    <section xml:id="dbdoclet.ie-le-pcrel" revisionflag="added">
+    <section xml:id="dbdoclet.ie-le-pcrel">
       <title>Initial Exec to Local Exec (PC-Relative)</title>
       <table frame="all" pgwide="1">
         <title>Initial-Exec-to-Local-Exec Initial Relocations

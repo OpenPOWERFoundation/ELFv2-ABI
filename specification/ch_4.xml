@@ -698,12 +698,12 @@ PPC_FEATURE_HAS_VSX       0x00000080 /* P7 Vector Extension. */
 PPC_FEATURE_PSERIES_PERFMON_COMPAT 0x00000040
 PPC_FEATURE_TRUE_LE       0x00000002
 PPC_FEATURE_PPC_LE        0x00000001</programlisting>
-      <para revisionflag="added">Bit 0x00000004 is reserved for kernel use.
+      <para>Bit 0x00000004 is reserved for kernel use.
       </para>
       <para>AT_HWCAP2</para>
       <para>The a_val member of this entry is a bit map of hardware
       capabilities. Some bit mask values include:</para>
-      <programlisting revisionflag="changed">PPC_FEATURE2_ARCH_2_07      0x80000000 /* ISA 2.07 */
+      <programlisting>PPC_FEATURE2_ARCH_2_07      0x80000000 /* ISA 2.07 */
 PPC_FEATURE2_HAS_HTM        0x40000000 /* Hardware Transactional Memory */
 PPC_FEATURE2_HAS_DSCR       0x20000000 /* Data Stream Control Register */
 PPC_FEATURE2_HAS_EBB        0x10000000 /* Event Base Branching */
@@ -825,13 +825,11 @@ PPC_FEATURE2_MMA            0x00020000 /* Matrix Multiply Assist */</programlist
       addis instruction to provide a first high-order 16-bit portion of a
       32-bit displacement in conjunction with an instruction to supply a
       low-order 16-bit portion of a 32-bit displacement.</para>
-      <para>In PIC code<phrase revisionflag="added"> that uses the
-      TOC</phrase>, the TOC pointer r2 points to the TOC base, enabling
+      <para>In PIC code that uses the
+      TOC, the TOC pointer r2 points to the TOC base, enabling
       easy reference. For static nonrelocatable modules, the GOT address is
       fixed and can be directly used by code.</para>
-      <para revisionflag="deleted">All functions except leaf routines must
-      load the value of the TOC base into the TOC register r2.</para>
-      <para revisionflag="added">
+      <para>
 	Code may access GOT entries directly using PC-relative addressing,
 	where available.
       </para>
@@ -1040,11 +1038,11 @@ PPC_FEATURE2_MMA            0x00020000 /* Matrix Multiply Assist */</programlist
   ld     r12,func@plt@l(r12)
   mtctr  r12
   bctr</programlisting>
-        <para revisionflag="added">
+        <para>
 	  When PC-relative addressing is available, another simpler variant
 	  may alternatively be used for cases 2 or 3:
 	</para>
-	<programlisting revisionflag="added">pld     r12, func@plt@pcrel
+	<programlisting>pld     r12, func@plt@pcrel
 mtctr   r12
 bctr</programlisting>	  
         <para>To support lazy binding, the link editor also provides a set of
@@ -1084,9 +1082,9 @@ bctr</programlisting>
     mtlr r0
     # Compute .plt section index from entry point address in r12
     # .plt section index is placed into r0 as argument to the resolver
-    sub <phrase revisionflag="changed">r12</phrase>,r12,r11
-    subi <phrase revisionflag="changed">r12,r12</phrase>,res_0-1b
-    srdi r0,<phrase revisionflag="changed">r12</phrase>,2
+    sub r12,r12,r11
+    subi r12,r12,res_0-1b
+    srdi r0,r12,2
     # Load address of the first byte of the PLT
     ld r12,PLToffset-1b(r11)
     add r11,r12,r11
