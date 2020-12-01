@@ -7751,9 +7751,6 @@ stw    r9, 0(r11)</programlisting>
           </tbody>
         </tgroup>
       </table>
-      <note>
-        <itemizedlist>
-          <listitem>
             <para>Due to fusion hardware support, the preferred code forms are
             destructive<footnote xml:id="pgfId-1139524">
               <para>Destructive in this context refers to a code sequence where
@@ -7766,8 +7763,6 @@ stw    r9, 0(r11)</programlisting>
             high-order bits followed immediately by a destructive load using
             the same target register as the addis instruction to load data from
             a signed 32-bit offset from a base register.</para>
-          </listitem>
-          <listitem>
             <para>For TOC-based PIC
 	    code (see <xref linkend="dbdoclet.50655240_page77" /> and 
             <xref linkend="dbdoclet.50655240_19926" />), the offset in the
@@ -7829,9 +7824,6 @@ stw    r9, 0(r11)</programlisting>
             If it has an unsigned immediate operand (for example, ori), use
             symbol@got@<emphasis role="bold">h</emphasis>. For a description of high-adjusted values, see 
             <xref linkend="dbdoclet.50655241_51269" />.</para>
-          </listitem>
-        </itemizedlist>
-      </note>
     </section>
     <section xml:id="dbdoclet.50655240_88555">
       <title>Function Calls</title>
