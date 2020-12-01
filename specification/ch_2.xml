@@ -4438,7 +4438,7 @@ xml:id="dbdoclet.50655240_pgfId-1156194">
 	</para>
       </section>
       <section xml:id="dbdoclet.50655241_Ext1">
-	<title>External Call, Caller Does Not Use TOC, Caller Does Not Preserve
+	<title>External Call, Caller Does Not Use TOC or Preserve
 	r2</title>
 	<para>
 	  When a function that does not use a TOC pointer and does not preserve
@@ -8012,6 +8012,8 @@ ptrfunc = function;
 
 
 (*ptrfunc) ( );
+
+
 
 
 
